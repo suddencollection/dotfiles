@@ -7,3 +7,7 @@
 </p>
 
 > ⚠️ work in progress
+
+## Todo
+- wal themes in .cache
+- nixos configuration file
