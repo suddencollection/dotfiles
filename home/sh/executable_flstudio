@@ -1,0 +1,3 @@
+#!/usr/bin/env sh
+
+bottles-cli run -b 'Fruit Loops' -p 'FL64'

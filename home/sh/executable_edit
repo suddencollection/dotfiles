@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+
+sudo -E $EDITOR /etc/nixos/configuration.nix
+

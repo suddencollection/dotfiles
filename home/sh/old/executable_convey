@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+#!/usr/bin/env fish
+
+# LUA_PATH
+set project_path "$HOME/sys"
+set --export LUA_PATH "$project_path/?.lua;$LUA_PATH;;"
+
+# run init.lua
+$project_path/src/init.lua $argv

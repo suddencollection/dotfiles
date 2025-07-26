@@ -1,0 +1,3 @@
+#!/usr/bin/env sh
+
+swww img $1 --transition-fps 70 -t wave --transition-wave 50,10

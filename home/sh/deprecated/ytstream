@@ -1,0 +1,3 @@
+#!/usr/bin/env fish
+
+mpc add $(youtube-dl -g -f140 $argv[1])

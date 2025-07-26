@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+
+echo 'music is disabled.'
+exit 0
+# https://github.com/abba23/spotify-adblock
+LD_PRELOAD=$HOME/sh/.spotify-adblock.so spotify
+

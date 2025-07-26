@@ -1,0 +1,12 @@
+#!/usr/bin/env fish
+
+while true
+  echo 'Pinging'
+  if ping -c 1 "google.com" &> /dev/null
+    echo "Ping successful! Exiting."
+    break
+  else
+    echo "Ping failed. Retrying in 2 seconds..."
+    sleep 2
+  end
+end

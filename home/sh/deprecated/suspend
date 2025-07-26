@@ -1,0 +1,3 @@
+#!/bin/bash
+
+$(xdg-user-dir)/.config/awesome/sh/locker.sh && systemctl suspend

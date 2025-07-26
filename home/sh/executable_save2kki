@@ -1,0 +1,3 @@
+#!/usr/bin/env sh
+
+mv $HOME/Downloads/2kki_Save*.lsd /cloud/etc/ynoproject/2kki/
