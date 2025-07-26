@@ -1,5 +1,6 @@
 # Dotfiles
-⚠️ work in progress
+> ⚠️ work in progress
 
-## TODO
-- [ ] Rewrite my hyprland configuration to match the new version
+<p align="center">
+  <img src="https://github.com/suddencollection/dotfiles/blob/main/etc/screenshot-260725-164947.png?raw=true"/>
+</p>
