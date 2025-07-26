@@ -1,0 +1,19 @@
+--------------------------
+
+local aw = require("awesome")
+local icons = require("zbxi/icons")
+
+local cmd = [[df -l /]]
+local pattern = [[/%w+%s+(%d+)%s+(%d+)%s+(%d+)%s+(%d+)]]
+
+return function(updateTime)
+  assert(
+    type(updateTime) == "number",
+    "Invalid input. 1° parameter is the update time in seconds, and must be a number."
+  )
+  assert(updateTime > 0, "Invalid input. 1° parameter must be higher than 0.")
+  return aw.awful.widget.watch(cmd, 1, function(widget, stdout)
+    local size, used, available, percentage = stdout:match(pattern)
+    widget:set_text(icons.hd .. " " .. percentage --[=[.. "%"]=])
+  end)
+end
