@@ -1,2 +1,6 @@
 [data]
   wallpaper_path = '/home/nyne/pictures/wallpaper'
+  editor = 'nvim'
+  visual = 'nvim'
+  terminal = 'kitty'
+  chezmoi_source = '/cloud/home/dotfiles/'

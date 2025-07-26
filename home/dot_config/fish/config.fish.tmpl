@@ -1,0 +1,55 @@
+# config.fish
+
+## Default Apps
+export VISUAL='{{ .terminal }}'
+export EDITOR='{{ .editor }}'
+export TERMINAL='{{ .editor }}'
+
+## Toolkit Theming
+export QT_STYLE_OVERRIDE='Adwaita-Dark'
+export GTK_THEME='Adwaita:dark'
+# export GTK2_RC_FILES='/usr/share/themes/Adwaita-dark/gtk-2.0/gtkrc'
+
+export CHEZMOI_SOURCE_PATH='{{ .chezmoi_source }}'
+
+set -g fish_preexec_interactive false
+
+## Helper variables
+# set app_bottle "$HOME/.local/share/bottles/bottles/application"
+
+## Commands to run in interactive sessions can go here
+if status is-interactive
+    fish_add_path $HOME/sh
+    fish_add_path $HOME/games/sh
+    fish_add_path $HOME/.cargo/bin
+
+    alias ls='lsd'
+    alias cat='bat -p --paging=auto'
+    alias rm='trash-put'
+    alias neo='clear; echo; neofetch; echo'
+    zoxide init fish | source
+    alias cd='z'
+
+    # function chezmoi_home
+    #     command chezmoi --source /cloud/home/dotfiles --destination /home/$USER $argv
+    # end
+
+    function chezmoi
+        command chezmoi --source /cloud/home/dotfiles --destination /cloud/home $argv
+    end
+
+    #wal -R
+    function pls
+        eval "sudo $history[1]"
+    end 
+
+    function my_preexec --on-event fish_preexec
+        #echo "Pre"
+    end
+    function my_postexec --on-event fish_postexec
+        #echo "Pos"
+    end
+end
+
+function fish_greeting
+end
