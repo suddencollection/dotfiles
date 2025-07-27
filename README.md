@@ -2,6 +2,8 @@
 ```bash
 "There's no place like $HOME"
 ```
+
+</p>
 <p align="center">
   <img src="https://github.com/suddencollection/dotfiles/blob/main/etc/screenshot-260725-164947.png?raw=true"/>
 </p>
@@ -10,7 +12,10 @@
 
 ## Todo
 - actually write the readme
+- list keybindings for hyprland, aka workflow
 
+## Philosophy
+- maybe?
 
 ## 🚀 Features
 
