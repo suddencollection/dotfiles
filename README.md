@@ -10,12 +10,7 @@
 
 > ⚠️ work in progress
 
-## Todo
-- actually write the readme
-- list keybindings for hyprland, aka workflow
-
-## Philosophy
-- maybe?
+A comprehensive dotfiles repository managed with [chezmoi](https://www.chezmoi.io/) for a modern Linux desktop environment featuring Hyprland, Eww, and dynamic theming with pywal.
 
 ## 🚀 Features
 
@@ -32,11 +27,6 @@ Here's a breakdown of the main software I use and configure in this repository:
 | **Editor** | Neovim _(AstroNvim)_ | Extensible text editor with modern features |
 | **Launcher** | Rofi | Application launcher and dmenu replacement |
 
--------------------------
-
-# Dotfiles Configuration
-
-A comprehensive dotfiles repository managed with [chezmoi](https://www.chezmoi.io/) for a modern Linux desktop environment featuring Hyprland, Eww, and dynamic theming with pywal.
 
 ## 🔧 Key Components
 
@@ -45,14 +35,13 @@ Modern Wayland compositor with advanced features and smooth animations.
 
 ### Eww Bar
 Custom status bar with widgets for:
-- System information (CPU, memory, temperature, storage)
-- Audio controls and visualization
+- System information (CPU, memory, temperature, volume, storage, battery)
 - Workspace management
 - Calendar and clock
 - Custom icons and styling
 
 ### Neovim Setup
-- Based on AstroNvim framework
+- Based on [AstroNvim](https://astronvim.com/) framework
 - LSP configuration with Mason
 - Treesitter for syntax highlighting
 - Community plugins integration
@@ -61,35 +50,89 @@ Custom status bar with widgets for:
 Located in `sh/` directory:
 - Network management (`connect`, `disconnect`, `start_net`, `stop_net`)
 - System utilities (`doze`, `rebuild`, `screenshot`)
-- Media controls (`music`, `flstudio`)
-- Development tools (`edit`, `save2kki`)
 - Application launchers (`launcher`, `paper`)
+- Development tools (`edit`)
 
 ## 📦 Installation
-- to make it nix specific
+0. Add the following to your `configuration.nix`
+```nix
 
-1. **Install chezmoi**:
+  fonts.packages = with pkgs; [ 
+    nerd-fonts.fira-code # fancy icons and ligatures
+  ];
+
+  users.users.your_username.packages = with pkgs; [
+    # improved terminal workflow, see 'fish.config'
+    zoxide
+    lsd
+    bat
+    trash-cli # no more rm -rf doom
+
+    # toys
+    cava
+    neofetch
+    cmatrix
+
+    # programs
+    neovim
+    chezmoi
+    hyprland
+    eww
+    kitty
+    rofi
+    pywal
+    swww
+    pywalfox-native # see the pywalfox firefox addon for theming your browser
+    git # you may already have it
+    
+
+    # For hyprland mapped keybindings and eww widgets
+    brightnessctl
+    lm_sensors
+    grim
+    graphviz
+    playerctl
+    # alsa-utils
+
+    # optional
+    # syncthing  # unneeded, but it autostarts in the defaults
+    # gimp       # a heavy way of editing screenshots
+
+    # extra, quality of life
+    gdu             # disk usage
+    wf-recorder     # screen recorder
+    broot           # you can use a file manager of your choice
+    gh              # github (not git) terminal tool
+    appimage-run
+    tree
+    file
+    btop
+  ]
+
+  # users.users.your_username.shell = pkgs.fish;  # only for your user
+  users.defaultUserShell = pkgs.fish;               # If you want fish everywhere
+
+  # they need to be explicty enabled
+  fish.enable = true;
+  hyprland.enable = true;
+
+  # needed by mason on neovim
+  nix-ld.enable = true;
+```
+
+1. **Initialize chezmoi with this repository**:
    ```bash
-   sh -c "$(curl -fsLS get.chezmoi.io)"
+   $ chezmoi init --apply https://github.com/suddencollection/dotfiles.git
    ```
 
-2. **Initialize with this repository**:
+2. **Apply configurations**
    ```bash
-   chezmoi init --apply https://github.com/yourusername/dotfiles.git
+   $ # backup you old configs first, in case you need them back
+   $ chezmoi apply
    ```
-
-3. **Install dependencies** (adjust for your distribution):
-   ```bash
-   # Essential packages
-   sudo pacman -S hyprland eww rofi fish neovim cava
-   
-   # Python dependencies for scripts
-   pip install pywal
-   ```
-
+<!--
 ## 🛠️ Dependencies
-
-- to talk about nix config packages
+-->
 
 ## 🎯 Usage
 
@@ -103,17 +146,6 @@ chezmoi edit ~/.config/hypr/hyprland.conf
 
 # Add new files
 chezmoi add ~/.config/newapp/config
-```
-
-### Custom Scripts
-All executable scripts are available in your PATH after installation
-They're loaded in fish configuration, meant to be called by hyprland for certain keybindings and also from terminal usage
-
-```bash
-launcher      # Open application launcher
-screenshot    # Take a screenshot
-music         # Music controls
-rebuild       # Rebuild system configuration
 ```
 
 ### Theme Management
