@@ -1,4 +1,4 @@
-(defvar scriptDir "$HOME/.config/eww/bar/scripts")
+(defvar scriptDir "$HOME/.config/eww/bar/myscripts")
 
 (defpoll var_date
 	:interval "1s"
@@ -224,78 +224,3 @@
 		)
 	)
 )
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-
-;; (defpoll clipboard_content :interval "1s"
-;;         `/home/$USER/.config/eww/bar/scripts/clipboard_manager.py`)
-
-;; (defpoll time :interval "1s"
-;; 	`date +"  %d %m %y     %H %M %S"`)
-
-;; (defpoll volume :interval "1s"
-;;         `/home/$USER/.config/eww/bar/scripts/volume.py`)
-
-;; (defpoll wifi :interval "3s"
-;;         `/home/$USER/.config/eww/bar/scripts/wifi.py`)
-
-;; (deflisten song_status :initial "Select playlist to begin"
-;;         `/home/$USER/.config/eww/bar/scripts/song_status.py`)
-
-
-;; (defwindow oldbar
-;; 	:monitor 0
-;; 	:windowtype "dock"
-;; 	:geometry
-;; 		(geometry 
-;; 	    :x "98%"
-;; 	    :y "12px"
-;; 			:width "99%"
-;; 			:height "3%"
-;; 			:anchor "top center")
-;; 	:stacking "fg"
-;; 	:windowtype "dock"
-;; 	:exclusive true	
-;;
-;; 	(box :class "container"
-;; 		(box :class "workspaces" :halign "start" (literal :content "${workspaces}"))
-;;
-;; 	;; (box :class "music" :halign "center" :spacing 10 :space-evenly false  
-;;  ;;        	
-;;  ;;        (literal :content "(box :class \"music_icon\" (button :class \"music_icon_butt\" :onclick \"${home_dir}/toggle_playlist_selector.py\" \"󰲸\" ))")
-;; 	;; (literal :halign "center" :content "(box :class \"music_text\" (label :text \"${song_status}\" ))")
-;;  ;;        )
-;;
-;;   ;; "${battery}" "${wifi}" "${volume}"
-;; 		(button :class "time_battery" :halign "end" "${time}")
-;; 	)
-;; )
-
-;; (defwindow clipboard_manager
-;;   :monitor 0
-;;   :windowtype "normal"
-;;   :geometry (geometry
-;;               :y "-3px"
-;;               :x "83%"
-;;               :width "17%"
-;;               )
-;;   
-;;     (literal :content "${clipboard_content}" )
-;;   )
-
-;; (defwindow playlist_selector
-;;   :monitor 0
-;;   :windowtype "normal"
-;;   :geometry (geometry
-;;               :y "-4px"
-;;               :width "16%"
-;;               :anchor "top center"
-;;               )
-;;   (box :orientation "vertical"
-;;     (button :class "playlist_button" :onclick "${home_dir}/playlist_selector.py modern" "Modern")
-;;     (button :class "playlist_button" :onclick "${home_dir}/playlist_selector.py electronic" "Electronic") 
-;;     (button :class "playlist_button" :onclick "${home_dir}/playlist_selector.py classic" "Classic") 
-;;     (button :class "playlist_button" :onclick "${home_dir}/playlist_selector.py soundtracks" "Soundtracks")
-;;     )
-;;   )
