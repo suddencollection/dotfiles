@@ -9,5 +9,4 @@
 > ⚠️ work in progress
 
 ## Todo
-- nixos configuration file
-- nvim config
+- actually write the readme
