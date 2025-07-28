@@ -64,7 +64,7 @@ This should be enough for getting started. A complete list of keybindings can be
     pywalfox-native # see the pywalfox firefox addon for theming your browser
 
     # For hyprland mapped keybindings and eww widgets
-    brightnessctl lm_sensors grim playerctl # alsa-utils
+    brightnessctl lm_sensors grim playerctl alsa-utils
 
     # optional
     # syncthing  # unneeded, but it autostarts in the defaults
