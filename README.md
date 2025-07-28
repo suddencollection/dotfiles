@@ -101,7 +101,7 @@ This should be enough for getting started. A complete list of keybindings can be
   users.defaultUserShell = pkgs.fish;             # If you want fish everywhere
   # users.users.your_username.shell = pkgs.fish;  # or only for your user
 
-  # they need to be explicty enabled
+  # they need to be explictly enabled
   fish.enable = true;
   hyprland.enable = true;
 
