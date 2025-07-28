@@ -10,8 +10,8 @@
 
 > ⚠️ work in progress
 
-A comprehensive dotfiles repository managed with [chezmoi](https://www.chezmoi.io/) for a modern Linux desktop environment featuring Hyprland, Eww, and dynamic theming with pywal.
-
+A collection of configuration files for a Linux desktop, built around NixOS and a curated list of programs and tools. Intended to be lightweight, visually clean, and easy to tweak.
+  
 ## 🚀 Features
 
 Here's a breakdown of the main software I use and configure in this repository:
@@ -27,31 +27,21 @@ Here's a breakdown of the main software I use and configure in this repository:
 | **Editor** | Neovim _(AstroNvim)_ | Extensible text editor with modern features |
 | **Launcher** | Rofi | Application launcher and dmenu replacement |
 
+## 🎯 Workflow
+### Basic Navigation
 
-## 🔧 Key Components
+> **Note**: `MOD` is the Super key (`Alt` here, by default).
 
-### Hyprland
-Modern Wayland compositor with advanced features and smooth animations.
+| Action                  | Keybinding                |
+| ----------------------- | ------------------------- |
+| Launch terminal         | `MOD` + `M`                   |
+| Open app launcher     | `MOD` + `R`                   |
+| Close focused window     | `MOD` + `C`                   |
+| Change window focus     | `MOD` + `J/K/L/;`             |
+| Move focuses window      | `MOD` + `Shift` + `J/K/L/;`     |
+| Switch to workspace     | `MOD` + `1 - 9`               |
 
-### Eww Bar
-Custom status bar with widgets for:
-- System information (CPU, memory, temperature, volume, storage, battery)
-- Workspace management
-- Calendar and clock
-- Custom icons and styling
-
-### Neovim Setup
-- Based on [AstroNvim](https://astronvim.com/) framework
-- LSP configuration with Mason
-- Treesitter for syntax highlighting
-- Community plugins integration
-
-### Custom Scripts
-Located in `sh/` directory:
-- Network management (`connect`, `disconnect`, `start_net`, `stop_net`)
-- System utilities (`doze`, `rebuild`, `screenshot`)
-- Application launchers (`launcher`, `paper`)
-- Development tools (`edit`)
+This should be enough for getting started. A complete list of keybindings can be seem in `.config/hyprland.conf`
 
 ## 📦 Installation
 0. Add the following to your `configuration.nix`
@@ -130,35 +120,3 @@ Located in `sh/` directory:
    $ # backup you old configs first, in case you need them back
    $ chezmoi apply
    ```
-<!--
-## 🛠️ Dependencies
--->
-
-## 🎯 Usage
-
-### Applying Changes
-```bash
-# Apply all dotfiles
-chezmoi apply
-
-# Edit a configuration
-chezmoi edit ~/.config/hypr/hyprland.conf
-
-# Add new files
-chezmoi add ~/.config/newapp/config
-```
-
-### Theme Management
-```bash
-# Generate new color scheme from wallpaper
-wal -i /path/to/wallpaper.jpg
-
-# Restart applications to apply new colors
-# (Most applications will automatically reload)
-```
-
-## 🔄 Updates
-
-To update your dotfiles:
-```bash
-chezmoi update
