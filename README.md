@@ -91,7 +91,7 @@ This should be enough for getting started. A complete list of keybindings can be
 
 1. **Initialize chezmoi with this repository**:
    ```bash
-   $ chezmoi init --apply https://github.com/suddencollection/dotfiles.git
+   $ chezmoi init --apply https://github.com/nynepebbles/dotfiles.git
    ```
 
 2. **Apply the configuration**
