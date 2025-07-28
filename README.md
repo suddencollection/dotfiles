@@ -80,7 +80,6 @@ This should be enough for getting started. A complete list of keybindings can be
     brightnessctl
     lm_sensors
     grim
-    graphviz
     playerctl
     # alsa-utils
 
