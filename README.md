@@ -8,8 +8,6 @@
   <img src="https://github.com/suddencollection/dotfiles/blob/main/etc/screenshot-260725-164947.png?raw=true"/>
 </p>
 
-> ⚠️ work in progress
-
 A collection of configuration files for a Linux desktop, built around NixOS and a curated list of programs and tools. Intended to be lightweight, visually clean, and easy to tweak.
   
 ## 🚀 Features
