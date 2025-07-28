@@ -41,10 +41,11 @@ Here's a breakdown of the main software I use and configure in this repository:
 | Move focuses window      | `MOD` + `Shift` + `J/K/L/;`     |
 | Switch to workspace     | `MOD` + `1 - 9`               |
 
-This should be enough for getting started. A complete list of keybindings can be seem in `.config/hyprland.conf`
+This should be enough for getting started. A complete list of keybindings can be seen in `.config/hyprland.conf`
 
 ## 📦 Installation
 0. Add the following to your `configuration.nix`
+
 ```nix
 
   fonts.packages = with pkgs; [ 
@@ -53,55 +54,34 @@ This should be enough for getting started. A complete list of keybindings can be
 
   users.users.your_username.packages = with pkgs; [
     # improved terminal workflow, see 'fish.config'
-    zoxide
-    lsd
-    bat
-    trash-cli # no more rm -rf doom
+    zoxide lsd bat trash-cli
 
     # toys
-    cava
-    neofetch
-    cmatrix
+    cava neofetch cmatrix
 
     # programs
-    neovim
-    chezmoi
-    hyprland
-    eww
-    kitty
-    rofi
-    pywal
-    swww
+    neovim chezmoi  hyprland eww kitty rofi pywal swww git
     pywalfox-native # see the pywalfox firefox addon for theming your browser
-    git # you may already have it
-    
 
     # For hyprland mapped keybindings and eww widgets
-    brightnessctl
-    lm_sensors
-    grim
-    playerctl
-    # alsa-utils
+    brightnessctl lm_sensors grim playerctl # alsa-utils
 
     # optional
     # syncthing  # unneeded, but it autostarts in the defaults
     # gimp       # a heavy way of editing screenshots
 
     # extra, quality of life
+    appimage-run tree file btop
     gdu             # disk usage
     wf-recorder     # screen recorder
     broot           # you can use a file manager of your choice
     gh              # github (not git) terminal tool
-    appimage-run
-    tree
-    file
-    btop
-  ]
+  ];
 
   users.defaultUserShell = pkgs.fish;             # If you want fish everywhere
   # users.users.your_username.shell = pkgs.fish;  # or only for your user
 
-  # they need to be explictly enabled
+  # they need to be explicitly enabled
   fish.enable = true;
   hyprland.enable = true;
 
@@ -114,8 +94,8 @@ This should be enough for getting started. A complete list of keybindings can be
    $ chezmoi init --apply https://github.com/suddencollection/dotfiles.git
    ```
 
-2. **Apply configurations**
+2. **Apply the configuration**
    ```bash
-   $ # backup you old configs first, in case you need them back
+   # backup you old configs first, in case you need them back
    $ chezmoi apply
-   ```
+    ```
