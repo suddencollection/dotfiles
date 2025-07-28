@@ -41,7 +41,7 @@ Here's a breakdown of the main software I use and configure in this repository:
 | Move focused window      | `MOD` + `Shift` + `J/K/L/;`     |
 | Switch to workspace     | `MOD` + `1 - 9`               |
 
-This should be enough for getting started. A complete list of keybindings can be seen in `.config/hyprland.conf`
+This should be enough for getting started. A complete list of keybindings can be found in `.config/hyprland.conf`
 
 ## 📦 Installation
 0. Add the following to your `configuration.nix`
