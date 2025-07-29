@@ -1,4 +1,4 @@
-# Dotfiles
+
 ```bash
 "There's no place like $HOME"
 ```
@@ -7,6 +7,8 @@
 <p align="center">
   <img src="https://github.com/suddencollection/dotfiles/blob/main/etc/screenshot-260725-164947.png?raw=true"/>
 </p>
+
+# Dotfiles
 
 A collection of configuration files for a Linux desktop, built around NixOS and a curated list of programs and tools. Intended to be lightweight, visually clean, and easy to tweak.
   
@@ -36,10 +38,10 @@ Here's a breakdown of the main software I use and configure in this repository:
 | Open app launcher     | `MOD` + `R`                   |
 | Close focused window     | `MOD` + `C`                   |
 | Change window focus     | `MOD` + `J/K/L/;`             |
-| Move focuses window      | `MOD` + `Shift` + `J/K/L/;`     |
+| Move focused window      | `MOD` + `Shift` + `J/K/L/;`     |
 | Switch to workspace     | `MOD` + `1 - 9`               |
 
-This should be enough for getting started. A complete list of keybindings can be seen in `.config/hyprland.conf`
+This should be enough for getting started. A complete list of keybindings can be found in `.config/hypr/hyprland.conf`
 
 ## 📦 Installation
 0. Add the following to your `configuration.nix`
@@ -62,7 +64,7 @@ This should be enough for getting started. A complete list of keybindings can be
     pywalfox-native # see the pywalfox firefox addon for theming your browser
 
     # For hyprland mapped keybindings and eww widgets
-    brightnessctl lm_sensors grim playerctl # alsa-utils
+    brightnessctl lm_sensors grim playerctl alsa-utils
 
     # optional
     # syncthing  # unneeded, but it autostarts in the defaults
@@ -89,7 +91,7 @@ This should be enough for getting started. A complete list of keybindings can be
 
 1. **Initialize chezmoi with this repository**:
    ```bash
-   $ chezmoi init --apply https://github.com/suddencollection/dotfiles.git
+   $ chezmoi init --apply https://github.com/nynepebbles/dotfiles.git
    ```
 
 2. **Apply the configuration**
