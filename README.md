@@ -5,7 +5,7 @@
 
 </p>
 <p align="center">
-  <img src="https://github.com/suddencollection/dotfiles/blob/main/etc/screenshot-260725-164947.png?raw=true"/>
+  <img src="https://github.com/nynepebbles/dotfiles/blob/main/etc/screenshot-260725-164947.png?raw=true"/>
 </p>
 
 # Dotfiles
