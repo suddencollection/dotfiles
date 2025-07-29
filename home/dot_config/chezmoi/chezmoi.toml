@@ -1,5 +1,5 @@
 [data]
-  wallpaper_path = '/home/nyne/pictures/wallpaper'
+  wallpaper_path = '/home/nyne/pictures/wallpaper.jpeg'
   editor = 'nvim'
   visual = 'nvim'
   terminal = 'kitty'
