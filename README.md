@@ -12,7 +12,7 @@
 
 A collection of configuration files for a Linux desktop, built around NixOS and a curated list of programs and tools. Intended to be lightweight, visually clean, and easy to tweak.
   
-## 🚀 Features
+## Features
 
 Here's a breakdown of the main software I use and configure in this repository:
 
@@ -27,7 +27,7 @@ Here's a breakdown of the main software I use and configure in this repository:
 | **Editor** | Neovim _(AstroNvim)_ | Extensible text editor with modern features |
 | **Launcher** | Rofi | Application launcher and dmenu replacement |
 
-## 🎯 Workflow
+## Workflow
 ### Basic Navigation
 
 > **Note**: `MOD` is the Super key (`Alt` here, by default).
@@ -43,7 +43,7 @@ Here's a breakdown of the main software I use and configure in this repository:
 
 This should be enough for getting started. A complete list of keybindings can be found in `.config/hypr/hyprland.conf`
 
-## 📦 Installation
+## Installation
 0. Add the following to your `configuration.nix`
 
 ```nix
