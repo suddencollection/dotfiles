@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+
+MAC="CD:96:73:82:2B:77"
+
+if bluetoothctl info "$MAC" 2>/dev/null | grep -q "Connected: yes"; then
+    bluetoothctl disconnect "$MAC"
+else
+    bluetoothctl connect "$MAC"
+fi
